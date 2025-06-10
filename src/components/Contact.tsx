@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Send, Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle } from "lucide-react"
 import emailjs from "@emailjs/browser"
@@ -117,6 +117,29 @@ function Contact() {
       },
     },
   }
+
+  useEffect(() => {
+    loadImages();
+  }, [loadImages]);
+
+  const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    // Implementation of handleImageLoad
+  };
+
+  useEffect(() => {
+    if (autoplay) {
+      const interval = setInterval(() => {
+        handleNext();
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [autoplay, handleNext]);
+
+  const linearGradients = React.useMemo(() => [
+    "linear-gradient(to bottom right, #06b6d4, #10b981)",
+    "linear-gradient(to bottom right, #ec4899, #6366f1)",
+    "linear-gradient(to bottom right, #f97316, #eab308)",
+  ], []);
 
   return (
     <Element name ="Contant">
@@ -286,7 +309,7 @@ function Contact() {
             </div>
 
             <div className="space-y-4">
-              {contactInfo.map((item, index) => (
+              {contactInfo.map((item) => (
                 <motion.div key={item.label} variants={itemVariants}>
                   <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow duration-200">
                     <CardContent className="p-6">

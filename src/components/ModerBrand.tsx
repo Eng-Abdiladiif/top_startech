@@ -1,14 +1,13 @@
 "use client"
 
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
-import { useRef, useState } from "react"
+import React from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ChevronRight, ArrowRight, Check } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 
-function ModernTechBrand() {
+export const ModerBrand = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -17,10 +16,6 @@ function ModernTechBrand() {
 
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0])
   const headerY = useTransform(scrollYProgress, [0, 0.1], [0, -100])
-
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
-
-
 
   const technologies = [
     "Frontend Development",
@@ -276,4 +271,4 @@ function ModernTechBrand() {
 }
 
 
-export default ModernTechBrand
+export default ModerBrand

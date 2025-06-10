@@ -2,11 +2,10 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link, Element } from "react-scroll/modules"
+import { Link } from "react-scroll/modules"
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Logo from "../../image/Logo.png"
 import Image from 'next/image';
-import ModeToggle from "../../src/components/ModeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
