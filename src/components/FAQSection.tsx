@@ -54,8 +54,9 @@ const itemVariants = {
 
 function FAQSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section className="py-24 bg-gradient-to-b
+     from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+      <div className="max-w-5xl mx-auto px-3 sm:px-3 lg:px-12">
         <motion.div initial="hidden" animate="visible" variants={containerVariants}>
           {/* Premium Title Section */}
           <motion.div variants={itemVariants} className="text-center mb-20">
@@ -76,16 +77,17 @@ function FAQSection() {
           {/* Premium FAQ Container */}
           <motion.div variants={itemVariants} className="mb-20">
             <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
-              <div className="p-8 sm:p-12">
+              <div className="p-8 sm:p-6">
                 <Accordion type="single" collapsible className="space-y-4">
                   {faqData.map((faq, index) => (
                     <motion.div key={faq.id} variants={itemVariants}>
                       <AccordionItem value={faq.id} className="border-none">
                         <div className="group border border-slate-200 dark:border-slate-600 rounded-2xl overflow-hidden hover:border-slate-300 dark:hover:border-slate-500 transition-all duration-300 hover:shadow-md">
                           <AccordionTrigger className="px-8 py-7 text-left hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 [&[data-state=open]]:bg-slate-50 dark:[&[data-state=open]]:bg-slate-700/50 [&[data-state=open]]:border-slate-300 dark:[&[data-state=open]]:border-slate-500">
-                            <div className="flex items-center justify-between w-full">
+                            <div className="flex  items-center justify-between w-full">
                               <div className="flex items-center space-x-6">
-                                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 text-white dark:text-slate-900 rounded-xl flex items-center justify-center shadow-lg">
+                                <div className="flex-shrink-0 
+                                w-12 h-12 bg-gradient-to-br from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 text-white dark:text-slate-900 rounded-xl flex items-center justify-center shadow-lg">
                                   <span className="text-lg font-bold">{String(index + 1).padStart(2, "0")}</span>
                                 </div>
                                 <h3 className="text-lg font-semibold text-slate-900 dark:text-white text-left leading-relaxed">
@@ -96,7 +98,7 @@ function FAQSection() {
                             </div>
                           </AccordionTrigger>
                           <AccordionContent className="px-8 pb-7">
-                            <div className="ml-18 pt-4 border-l-2 border-slate-200 dark:border-slate-600 pl-6">
+                            <div className="ml-2 pt-4 border-l-2 border-slate-200 dark:border-slate-600 pl-6">
                               <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">{faq.answer}</p>
                             </div>
                           </AccordionContent>
@@ -111,7 +113,8 @@ function FAQSection() {
 
           {/* Premium Contact Section */}
           <motion.div variants={itemVariants}>
-            <div className="bg-slate-900 dark:bg-slate-100 rounded-3xl p-12 text-center shadow-2xl">
+            <div className="bg-slate-900 dark:bg-slate-100 rounded-3xl 
+            p-12 text-center shadow-2xl">
               <h3 className="text-3xl font-bold text-white dark:text-slate-900 mb-4">Still Need Assistance?</h3>
               <p className="text-xl text-slate-300 dark:text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Our dedicated support team is available to help you with personalized assistance and detailed guidance.

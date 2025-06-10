@@ -1,26 +1,29 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useState, useEffect } from "react"
-import { ChevronRight, Play, Sparkles } from "lucide-react"
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { ChevronRight, Play, Sparkles } from "lucide-react";
+import { Link, Element } from "react-scroll/modules";
 
 function Hero() {
   const images = [
     "https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  ]
+  ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [images.length])
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
+    <Element name=  "Home"  active = {true}>
+
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background Images with Smooth Transition */}
       {images.map((image, index) => (
@@ -75,7 +78,9 @@ function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
             <Sparkles className="w-4 h-4 text-orange-400" />
-            <span className="text-sm font-medium text-white">Leading Digital Innovation</span>
+            <span className="text-sm font-medium text-white">
+              Leading Digital Innovation
+            </span>
           </div>
         </motion.div>
 
@@ -103,8 +108,8 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-lg md:text-xl text-gray-300 max-w-2xl mb-12 leading-relaxed"
         >
-          Transforming businesses through cutting-edge technology solutions and innovative digital experiences that
-          drive growth and success.
+          Transforming businesses through cutting-edge technology solutions and
+          innovative digital experiences that drive growth and success.
         </motion.p>
 
         {/* Buttons */}
@@ -170,13 +175,16 @@ function Hero() {
             key={index}
             onClick={() => setCurrentImageIndex(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentImageIndex ? "bg-orange-500 w-8" : "bg-white/40 hover:bg-white/60"
+              index === currentImageIndex
+                ? "bg-orange-500 w-8"
+                : "bg-white/40 hover:bg-white/60"
             }`}
           />
         ))}
       </div>
     </div>
-  )
+    </Element>
+  );
 }
 
-export default Hero
+export default Hero;

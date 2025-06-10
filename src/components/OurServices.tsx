@@ -48,13 +48,15 @@ function OurServices() {
   return (
 
     <Element  name="Services">
-    <section className="py-16 px-20 md:px-4 max-w-3xl mx-auto"
+    <section className="md:py-16 md:px-20
+    px-8 py-16 md:px-4 max-w-3xl mx-auto"
   >
       <div className="text-center mb-12"
       data-aos= "fade-down">
         <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">Our Services</h2>
         <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What We Offer</h3>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground max-w-3xl 
+        mx-auto">
           We provide comprehensive digital solutions to help your business grow and succeed in today's competitive
           market.
         </p>

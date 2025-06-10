@@ -12,7 +12,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/', to: "Home" },
     { name: 'Services', href: '/Services' , to:  "Services"},
     { name: 'About', href: '/About', to: "About" },
      { name: 'Price', href: '/Price', to: "Price" },

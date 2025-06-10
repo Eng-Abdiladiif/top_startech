@@ -188,7 +188,8 @@ function Price() {
             <Tabs value={activeService} onValueChange={setActiveService}>
               {/* Service Navigation */}
               <div className="border-b border-neutral-100">
-                <TabsList className="w-full h-auto bg-transparent p-8 grid grid-cols-3 gap-4">
+                <TabsList className="w-full h-auto bg-transparent
+                 p-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                   {services.map((service) => (
                     <TabsTrigger
                       key={service.id}
@@ -198,7 +199,7 @@ function Price() {
                         data-[state=active]:bg-neutral-900 transition-all 
                         duration-300 hover:border-neutral-300 "
                     >
-                      <div className="flex flex-col items-center gap-3">
+                      <div className="flex flex-col md:flex items-center gap-3">
                         <div
                           className={`p-3 rounded-xl ${service.accent} group-data-[state=active]:bg-white transition-colors`}
                         >

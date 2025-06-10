@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect } from "react";
 import { StickyScroll } from "../components/ui/sticky-scroll-reveal";
-import   Aos   from "aos"
-import   "aos/dist/aos.css"
+import Aos from "aos";
+import "aos/dist/aos.css";
 const content = [
   {
     title: "Our Vission",
@@ -16,7 +16,7 @@ const content = [
   },
 
   {
-    title: "Our Missiob",
+    title: "Our Mission",
     description:
       "Our mission at Top Star Tech is to deliver innovative digital solutions that enable real-time collaboration between teams, clients, and stakeholders. We are committed to streamlining workflows, enhancing productivity, and driving smarter decision-making through user-friendly technology and intelligent design.",
     content: (
@@ -25,22 +25,16 @@ const content = [
       </div>
     ),
   },
-  
 ];
 function VissionMission() {
-
-
-  useEffect(()  => {
-
-
-    Aos.init({duration:3000})
-  })
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  });
   return (
-    <div className="w-full py-4"
-    data-aos = "fade-up">
+    <div className="w-full py-4" data-aos="fade-up">
       <StickyScroll content={content} />
     </div>
   );
 }
 
-export  default VissionMission
+export default VissionMission;
