@@ -22,7 +22,7 @@ function Hero() {
   }, [images.length]);
 
   return (
-    <Element name=  "Home"  active = {true}>
+    <Element name=  "Home"  >
 
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background Images with Smooth Transition */}

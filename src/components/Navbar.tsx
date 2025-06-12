@@ -49,7 +49,7 @@ const Navbar = () => {
                   <Link
                     href={item.href}
                     to = {item.to}
-                    active = {true}
+                  
                     className="text-gray-700
                     hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
@@ -98,7 +98,7 @@ const Navbar = () => {
             <Link
               key={item.name}
               href={item.href}
-              active = {true}
+          
               className="text-gray-700 hover:text-orange-600 block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsOpen(false)}
             >

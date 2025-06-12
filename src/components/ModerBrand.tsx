@@ -6,6 +6,7 @@ import { useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
+import  {Check}  from "lucide-react"
 
 export const ModerBrand = () => {
   const containerRef = useRef<HTMLDivElement>(null)
