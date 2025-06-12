@@ -70,7 +70,7 @@ function Contact() {
         message: "Thank you! Your message has been sent successfully.",
       })
       setFormData({ name: "", email: "", subject: "", message: "" })
-    } catch (error) {
+    } catch {
       setStatus({
         type: "error",
         message: "Something went wrong. Please try again or contact me directly.",
@@ -141,7 +141,7 @@ function Contact() {
               Contact Me
             </motion.h2>
             <motion.p variants={itemVariants} className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you as soon as
+              Have a project in mind? I&apos;d love to hear about it. Send me a message and I&apos;ll get back to you as soon as
               possible.
             </motion.p>
           </motion.div>
@@ -303,7 +303,7 @@ function Contact() {
               </div>
 
               <div className="space-y-4">
-                {contactInfo.map((item, index) => (
+                {contactInfo.map((item) => (
                   <motion.div
                     key={item.label}
                     variants={itemVariants}
